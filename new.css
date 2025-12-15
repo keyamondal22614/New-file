@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #222;
+}
+
+/* Top bar */
+
+.site-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-main {
+  letter-spacing: 0.28em;
+  font-size: 18px;
+}
+
+.logo-sub {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  margin-top: 4px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #222;
+}
+
+.main-nav a:hover {
+  color: #007bff;
+}
+
+.btn-outline {
+  border: 1px solid #222;
+  padding: 10px 24px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+  color: #222;
+}
+
+.btn-outline:hover {
+  background: #222;
+  color: #fff;
+}
+
+/* Hero section */
+
+.hero {
+  position: relative;
+  flex: 1;
+  background-image: url("https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg");
+  /* replace URL with your building image if needed */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px 120px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 80, 170, 0.4),
+    rgba(0, 80, 170, 0.2)
+  );
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 40px;
+  letter-spacing: 0.3em;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 14px;
+  max-width: 420px;
+  margin: 0 auto 28px;
+}
+
+.btn-ghost {
+  display: inline-block;
+  border: 1px solid #fff;
+  padding: 12px 32px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-ghost:hover {
+  background: #fff;
+  color: #007bff;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .top-bar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+    letter-spacing: 0.2em;
+  }
+}
